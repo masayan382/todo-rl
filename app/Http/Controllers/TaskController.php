@@ -9,9 +9,9 @@ use App\Models\Task;
 class TaskController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Task一覧
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illminate\Support\Collection
      */
     public function index()
     {
