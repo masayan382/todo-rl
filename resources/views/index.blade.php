@@ -14,4 +14,4 @@
 </body>
 <script src="{{ mix('js/index.js') }}"></script>
 
-</html s
+</html>
