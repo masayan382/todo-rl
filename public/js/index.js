@@ -2467,7 +2467,10 @@ var TaskList = function TaskList() {
   }, react_1["default"].createElement("ul", {
     className: "task-list"
   }, tasks.map(function (task) {
-    return react_1["default"].createElement(TaskItem_1["default"], null);
+    return react_1["default"].createElement(TaskItem_1["default"], {
+      key: task.id,
+      task: task
+    });
   }), react_1["default"].createElement("li", null, react_1["default"].createElement("label", {
     className: "checkbox-label"
   }, react_1["default"].createElement("input", {

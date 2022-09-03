@@ -19,7 +19,7 @@ const TaskList: React.FC = () => {
             <div className="inner">
                 <ul className="task-list">
                     {tasks.map((task) => (
-                        <TaskItem />
+                        <TaskItem key={task.id} task={task} />
                     ))}
                     <li>
                         <label className="checkbox-label">

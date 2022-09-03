@@ -1,5 +1,7 @@
+import * as api from "../api/TaskAPI";
+import { useQuery } from "react-query";
 import axios from "axios";
-import { Task } from "../pages/types/Task";
+import { Task } from "../types/Task";
 
 const getTasks = async () => {
     const { data } = await axios.get<Task[]>("api/tasks");
