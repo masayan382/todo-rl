@@ -22,10 +22,10 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return resuponse()->json(Auth::user());
+            return response()->json(Auth::user());
         }
 
-        return resuponse()->json([], 401);
+        return response()->json([], 401);
     }
 
     /**
