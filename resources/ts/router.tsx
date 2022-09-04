@@ -1,22 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import HelpPage from "./pages/help";
 import LoginPage from "./pages/login";
 import TaskPage from "./pages/tasks";
+import axios from "axios";
 
-function Home() {
-    return <h2>Home</h2>;
-}
+// function Home() {
+//     return <h2>Home</h2>;
+// }
 
-function About() {
-    return <h2>About</h2>;
-}
+// function About() {
+//     return <h2>About</h2>;
+// }
 
-function Users() {
-    return <h2>Users</h2>;
-}
+// function Users() {
+//     return <h2>Users</h2>;
+// }
 
 const Router = () => {
+    useEffect(() => {
+        axios
+            .post("/api/login", {
+                email: "test@example.com",
+                password: "123456789",
+            })
+            .then((response) => {
+                console.log(response);
+            });
+    }, []);
     return (
         <BrowserRouter>
             <header className="global-head">
