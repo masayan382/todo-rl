@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import HelpPage from "./pages/help";
 import LoginPage from "./pages/login";
 import TaskPage from "./pages/tasks";
-import axios from "axios";
+// import axios from "axios";
 
 // function Home() {
 //     return <h2>Home</h2>;
@@ -18,16 +18,16 @@ import axios from "axios";
 // }
 
 const Router = () => {
-    useEffect(() => {
-        axios
-            .post("/api/login", {
-                email: "test@example.com",
-                password: "123456789",
-            })
-            .then((response) => {
-                console.log(response);
-            });
-    }, []);
+    // useEffect(() => {
+    //     axios
+    //         .post("/api/login", {
+    //             email: "test@example.com",
+    //             password: "123456789",
+    //         })
+    //         .then((response) => {
+    //             console.log(response);
+    //         });
+    // }, []);
     return (
         <BrowserRouter>
             <header className="global-head">
