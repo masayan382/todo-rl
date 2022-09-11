@@ -10,6 +10,10 @@ const LoginPage: React.FC = () => {
         e.preventDefault();
         login.mutate({ email, password });
     };
+    const handleGest = () => {
+        setEmail("gest@gest.com");
+        setPassword("123456789");
+    };
 
     return (
         <>
@@ -40,6 +44,7 @@ const LoginPage: React.FC = () => {
                                     type="checkbox"
                                     id="gestMode"
                                     title="ゲストモードでログインする"
+                                    onClick={() => handleGest()}
                                 />
                                 <span>ゲストモードでログインする</span>
                             </label>

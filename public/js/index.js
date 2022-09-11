@@ -2736,6 +2736,11 @@ var LoginPage = function LoginPage() {
     });
   };
 
+  var handleGest = function handleGest() {
+    setEmail("gest@gest.com");
+    setPassword("123456789");
+  };
+
   return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("div", {
     className: "login-page"
   }, react_1["default"].createElement("div", {
@@ -2765,7 +2770,10 @@ var LoginPage = function LoginPage() {
   }, react_1["default"].createElement("label", null, react_1["default"].createElement("input", {
     type: "checkbox",
     id: "gestMode",
-    title: "\u30B2\u30B9\u30C8\u30E2\u30FC\u30C9\u3067\u30ED\u30B0\u30A4\u30F3\u3059\u308B"
+    title: "\u30B2\u30B9\u30C8\u30E2\u30FC\u30C9\u3067\u30ED\u30B0\u30A4\u30F3\u3059\u308B",
+    onClick: function onClick() {
+      return handleGest();
+    }
   }), react_1["default"].createElement("span", null, "\u30B2\u30B9\u30C8\u30E2\u30FC\u30C9\u3067\u30ED\u30B0\u30A4\u30F3\u3059\u308B"))), react_1["default"].createElement("button", {
     type: "submit",
     className: "btn"
@@ -3228,6 +3236,7 @@ var useLogout = function useLogout() {
     onSuccess: function onSuccess(user) {
       if (user) {
         setIsAuth(false);
+        window.location.href = "/login";
       }
     },
     onError: function onError() {

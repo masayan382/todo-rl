@@ -26,6 +26,7 @@ const useLogout = () => {
         onSuccess: (user) => {
             if (user) {
                 setIsAuth(false);
+                window.location.href = "/login";
             }
         },
         onError: () => {

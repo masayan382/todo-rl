@@ -92,6 +92,7 @@ html {
 .input-form .inner {
   display: flex;
   position: relative;
+  padding: 0 10px;
 }
 .input-form .input {
   width: 80%;
