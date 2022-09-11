@@ -2718,12 +2718,12 @@ var AuthQuery_1 = __webpack_require__(/*! ../../queries/AuthQuery */ "./resource
 var LoginPage = function LoginPage() {
   var login = (0, AuthQuery_1.useLogin)();
 
-  var _ref = (0, react_1.useState)("admin@example.com"),
+  var _ref = (0, react_1.useState)(""),
       _ref2 = _slicedToArray(_ref, 2),
       email = _ref2[0],
       setEmail = _ref2[1];
 
-  var _ref3 = (0, react_1.useState)("123456789"),
+  var _ref3 = (0, react_1.useState)(""),
       _ref4 = _slicedToArray(_ref3, 2),
       password = _ref4[0],
       setPassword = _ref4[1];
@@ -2760,7 +2760,13 @@ var LoginPage = function LoginPage() {
     onChange: function onChange(e) {
       return setPassword(e.target.value);
     }
-  })), react_1["default"].createElement("button", {
+  })), react_1["default"].createElement("div", {
+    className: "gest"
+  }, react_1["default"].createElement("label", null, react_1["default"].createElement("input", {
+    type: "checkbox",
+    id: "gestMode",
+    title: "\u30B2\u30B9\u30C8\u30E2\u30FC\u30C9\u3067\u30ED\u30B0\u30A4\u30F3\u3059\u308B"
+  }), react_1["default"].createElement("span", null, "\u30B2\u30B9\u30C8\u30E2\u30FC\u30C9\u3067\u30ED\u30B0\u30A4\u30F3\u3059\u308B"))), react_1["default"].createElement("button", {
     type: "submit",
     className: "btn"
   }, "\u30ED\u30B0\u30A4\u30F3"))), react_1["default"].createElement("div", {

@@ -351,3 +351,16 @@ ul.tag-list > li > a:hover {
     transform: rotate(360deg);
   }
 }
+.gest label {
+  display: block;
+  position: relative;
+  padding-left: 1.5em;
+  line-height: 1.5em;
+}
+.gest label input {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}

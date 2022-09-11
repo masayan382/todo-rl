@@ -3,13 +3,14 @@ import { useLogin } from "../../queries/AuthQuery";
 
 const LoginPage: React.FC = () => {
     const login = useLogin();
-    const [email, setEmail] = useState("admin@example.com");
-    const [password, setPassword] = useState("123456789");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
     const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         login.mutate({ email, password });
     };
+
     return (
         <>
             <div className="login-page">
@@ -32,6 +33,16 @@ const LoginPage: React.FC = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
+                        </div>
+                        <div className="gest">
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    id="gestMode"
+                                    title="ゲストモードでログインする"
+                                />
+                                <span>ゲストモードでログインする</span>
+                            </label>
                         </div>
                         <button type="submit" className="btn">
                             ログイン
