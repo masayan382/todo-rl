@@ -22,6 +22,14 @@ class UserSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'name' => 'gest',
+                'email' => 'gest@gest.com',
+                'email_verified_at' => now(),
+                'password' => \Hash::make('123456789'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }
