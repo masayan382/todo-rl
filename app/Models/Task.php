@@ -32,6 +32,6 @@ class Task extends Model
     ];
     protected $casts = [
         'is_done' => 'bool',
-        'use_id' => 'int'
+        'user_id' => 'int'
     ];
 }

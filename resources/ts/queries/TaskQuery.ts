@@ -25,7 +25,6 @@ const useCreateTask = () => {
             toast.success("登録に成功しました。");
         },
         onError: (error: AxiosError) => {
-            console.log(error.response?.data);
             if (error.response?.data.errors) {
                 Object.values(error.response.data.errors).map(
                     (message: any) => {
