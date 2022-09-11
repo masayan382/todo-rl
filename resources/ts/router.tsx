@@ -21,6 +21,8 @@ const Router = () => {
 
     useEffect(() => {
         if (authUser) {
+            console.log("authUser: ", authUser);
+
             if (authUser) {
                 setIsAuth(true);
             }

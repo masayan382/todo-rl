@@ -3522,6 +3522,8 @@ var Router = function Router() {
 
   (0, react_1.useEffect)(function () {
     if (authUser) {
+      console.log("authUser: ", authUser);
+
       if (authUser) {
         setIsAuth(true);
       }
